@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>CAP IM for REUs</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="libs/remark-css/default-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle
+
+
+&lt;img src="assets/figures/workflow.png" width="100%"&gt;
+
+.footnote[J. Bryan from http://stat545.com/]
+
+???
+
+# research workflow
+
+
+---
+class: middle, inverse
+
+- what if something needs to be redone, how to you manage that
+
+- keeping track of data sources, versions
+
+- how did I make that figure?
+
+
+???
+
+# challenges
+
+
+---
+class: middle
+
+- figure x and table x are contradictory
+
+- redo the analyses without omitting samples
+
+???
+
+# committee meeting scenario
+
+
+---
+background-image: url(https://media.giphy.com/media/MEtSuIu6qu0HC/giphy.gif)
+background-position: 50% 50%
+background-size: 50%
+class: inverse
+
+&lt;br&gt;
+&lt;br&gt;
+
+.yellow[*"Basically, if the thought of redoing your analyses is terrifying then you are doing it wrong."*
+— J. Bryan]
+
+???
+
+# you are doing it wrong
+
+
+---
+class: middle
+
+.light-blue[now add to that publishing your data and code]
+
+&lt;img src="assets/figures/workflow_with_data.png" width="100%"&gt;
+
+.footnote[
+J. Bryan from http://stat545.com/
+]
+
+???
+
+# research workflow plus
+
+
+---
+class: middle
+
+**reproducible research** is the ability to recompute data analytic results, given an observed data set and knowledge of the data analysis pipeline.
+
+.footnote[Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)]
+
+???
+
+# reproducible research
+
+
+---
+class: middle
+
+**reproducibility for scientific reasons**
+
+* increased trustworthiness
+* more rigorous, reliable science
+* learning more from one another's work
+
+  
+.footnote[Thompson 2018 [The Life &amp; Times of a Reproducible Clinical Project in R](https://bit.ly/jlt-rmed2018)]
+
+???
+
+# reproducibility for science
+
+
+---
+class: middle
+
+**reproducibility for personal reasons**
+
+- helps researchers remember how and why they did *x*
+- enables researchers to quickly and simply modify figures, tables, etc.
+- enables quick reconfiguration of previously conducted research tasks
+
+  
+.footnote[Alson and Rick 2021 [A Beginner\'s Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)]
+
+???
+
+# reproducibility for you
+
+
+---
+class: middle, center
+
+# how?
+
+
+---
+class: middle
+
+- naming things
+- conventions
+- project organization
+- metadata
+- data formats
+
+???
+
+# best practices
+
+
+---
+class: inverse
+
+
+.yellow[*“There are only two hard things in Computer Science: cache invalidation and naming things.”*
+— P. Karlton]
+  
+&lt;br&gt;
+  
+which set of file(names)s would you prefer at 3 a.m. before a deadline?
+
+.center[
+  &lt;img src="assets/figures/good_bad_names.png" width="85%"&gt;
+]
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# naming things
+
+---
+class: middle
+
+.center[
+  &lt;img src="assets/figures/noniso.png" width="70%"&gt;&lt;/img&gt;
+  &lt;br&gt;
+  .small[comprehensive map of all countries in the world that use MMDDYYYY format]
+]
+
+&lt;br&gt;
+  
+**use the ISO 8601 standard for dates (YYYY-MM-DD) everywhere. always. without exception, ever.**
+
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# convention: ISO example
+
+
+---
+
+.maroon[*"Your closest collaborator is you six months ago but you do not reply to emails."*
+— K. Broman]
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+  &lt;img src="assets/figures/projectOrganizationCropped.png" width="95%"&gt;
+]
+
+.pull-right[
+* all materials for a project in one directory
+* organize according to a convention (e.g., R package structure)
+* clear separation of data, methods, and output while making clear the relationship among them
+* specify the computational environment
+* convey meaning with thoughtful file and directory names
+* include README files
+]
+
+.footnote[K. Broman [Steps toward reproducible research](bit.ly/jsm2016)]
+
+???
+
+# project organization
+
+
+---
+class: middle
+
+* use open file formats (e.g., csv not xlsx)
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+  &lt;img src="assets/figures/paperclip.jpeg" width="45%"&gt;
+]
+
+.footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
+
+???
+
+# open file formats
+
+
+---
+class: middle
+
+most basic principle for reproducible research: **do everything via code**
+
+* downloading data from the web
+* converting an Excel file to CSV
+* renaming columns or variables
+* omitting bad samples or data points
+
+*...do all of these programmatically*
+
+.footnote[Broman 2016 [Steps toward reproducible research](https://bit.ly/jsm2016)]
+
+???
+
+# everything by code
+
+
+---
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+learn a language, any language, just do it
+
+.pull-left[
+  &lt;img src="assets/figures/rlogo.jpg" width="100%"&gt;
+]
+
+.pull-right[
+  &lt;img src="assets/figures/python-logo.png" width="70%"&gt;
+]
+
+???
+
+# learn a language
+
+
+---
+
+**spreadsheets: the 2nd best tool for everything**
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+  &lt;img src="assets/figures/spreadsheet_hidden_data.png" width="100%"&gt;
+]
+
+.pull-right[
+
+the beauty and the travesty of spreadsheets is that they allow you to do just about *anything*
+
+* data in merged cells
+* data in formatting
+* small multiples
+* data in formulas
+
+]
+
+???
+
+# second best tool
+
+
+---
+class: middle
+
+* use open file formats (e.g., csv not xlsx)
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+  &lt;img src="assets/figures/paperclip.jpeg" width="45%"&gt;
+]
+
+.footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
+
+???
+
+# open file formats
+
+---
+
+
+**spreadsheets versus scripting**
+
+consider, we want to remove samples that we feel may have been contaminated...
+
+.pull-left[
+
+  **in a R script**
+  &lt;hr&gt;
+  ```r
+  some work...
+  ```
+  
+
+.small[*comment code:*
+.light-blue[remove samples 4 and 5 that may have been compromised due to wading upstream during sampling]]
+  
+  ```r
+  chemistry_data %&gt;%
+    filter(!sampleID %in% c(4,5))
+  ```
+  
+  ```r
+  ...more work
+  ```
+]
+
+.pull-right[
+
+  **in a spreadsheet**
+  &lt;hr&gt;
+  &lt;img src="assets/figures/spreadsheet_remove_samples.png" width="105%"&gt;
+  
+]
+
+???
+
+# spreadsheets versus scripting
+
+
+---
+background-image: url('assets/figures/whypublish.png')
+background-size: 90%
+
+**why publish data**...
+
+.footnote[Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+???
+
+# why publish data
+
+* big picture
+  + increasingly a requirement
+  + advancement of science
+  
+* researcher perspective
+  + papers with publicly available data receive a higher number of citations than similar studies lacking available data&lt;sup&gt;1&lt;/sup&gt;
+  + data sharing is associated with higher productivity
+  + a citeable product
+  
+
+---
+
+**ORCiD**
+
+&lt;br&gt;
+
+.center[
+  &lt;img src="assets/figures/orcid.png" width="60%"&gt;
+]
+
+.footnote[[orcid.org](https://orcid.org/)]
+
+???
+
+# ORCiD
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

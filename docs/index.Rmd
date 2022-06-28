@@ -1,0 +1,406 @@
+---
+title: CAP IM for REUs
+subtitle: false
+author: false
+date: false
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: ["default", "assets/my-theme.css", "libs/remark-css/default-fonts.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: middle
+
+
+<img src="assets/figures/workflow.png" width="100%">
+
+.footnote[J. Bryan from http://stat545.com/]
+
+???
+
+# research workflow
+
+
+---
+class: middle, inverse
+
+- what if something needs to be redone, how to you manage that
+
+- keeping track of data sources, versions
+
+- how did I make that figure?
+
+
+???
+
+# challenges
+
+
+---
+class: middle
+
+- figure x and table x are contradictory
+
+- redo the analyses without omitting samples
+
+???
+
+# committee meeting scenario
+
+
+---
+background-image: url(https://media.giphy.com/media/MEtSuIu6qu0HC/giphy.gif)
+background-position: 50% 50%
+background-size: 50%
+class: inverse
+
+<br>
+<br>
+
+.yellow[*"Basically, if the thought of redoing your analyses is terrifying then you are doing it wrong."*
+— J. Bryan]
+
+???
+
+# you are doing it wrong
+
+
+---
+class: middle
+
+.light-blue[now add to that publishing your data and code]
+
+<img src="assets/figures/workflow_with_data.png" width="100%">
+
+.footnote[
+J. Bryan from http://stat545.com/
+]
+
+???
+
+# research workflow plus
+
+
+---
+class: middle
+
+**reproducible research** is the ability to recompute data analytic results, given an observed data set and knowledge of the data analysis pipeline.
+
+.footnote[Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)]
+
+???
+
+# reproducible research
+
+
+---
+class: middle
+
+**reproducibility for scientific reasons**
+
+* increased trustworthiness
+* more rigorous, reliable science
+* learning more from one another's work
+
+  
+.footnote[Thompson 2018 [The Life & Times of a Reproducible Clinical Project in R](https://bit.ly/jlt-rmed2018)]
+
+???
+
+# reproducibility for science
+
+
+---
+class: middle
+
+**reproducibility for personal reasons**
+
+- helps researchers remember how and why they did *x*
+- enables researchers to quickly and simply modify figures, tables, etc.
+- enables quick reconfiguration of previously conducted research tasks
+
+  
+.footnote[Alson and Rick 2021 [A Beginner\'s Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)]
+
+???
+
+# reproducibility for you
+
+
+---
+class: middle, center
+
+# how?
+
+
+---
+class: middle
+
+- naming things
+- conventions
+- project organization
+- metadata
+- data formats
+
+???
+
+# best practices
+
+
+---
+class: inverse
+
+
+.yellow[*“There are only two hard things in Computer Science: cache invalidation and naming things.”*
+— P. Karlton]
+  
+<br>
+  
+which set of file(names)s would you prefer at 3 a.m. before a deadline?
+
+.center[
+  <img src="assets/figures/good_bad_names.png" width="85%">
+]
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# naming things
+
+---
+class: middle
+
+.center[
+  <img src="assets/figures/noniso.png" width="70%"></img>
+  <br>
+  .small[comprehensive map of all countries in the world that use MMDDYYYY format]
+]
+
+<br>
+  
+**use the ISO 8601 standard for dates (YYYY-MM-DD) everywhere. always. without exception, ever.**
+
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# convention: ISO example
+
+
+---
+
+.maroon[*"Your closest collaborator is you six months ago but you do not reply to emails."*
+— K. Broman]
+
+<br>
+<br>
+
+.pull-left[
+  <img src="assets/figures/projectOrganizationCropped.png" width="95%">
+]
+
+.pull-right[
+* all materials for a project in one directory
+* organize according to a convention (e.g., R package structure)
+* clear separation of data, methods, and output while making clear the relationship among them
+* specify the computational environment
+* convey meaning with thoughtful file and directory names
+* include README files
+]
+
+.footnote[K. Broman [Steps toward reproducible research](bit.ly/jsm2016)]
+
+???
+
+# project organization
+
+
+---
+class: middle
+
+* use open file formats (e.g., csv not xlsx)
+
+<br>
+<br>
+
+.center[
+  <img src="assets/figures/paperclip.jpeg" width="45%">
+]
+
+.footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
+
+???
+
+# open file formats
+
+
+---
+class: middle
+
+most basic principle for reproducible research: **do everything via code**
+
+* downloading data from the web
+* converting an Excel file to CSV
+* renaming columns or variables
+* omitting bad samples or data points
+
+*...do all of these programmatically*
+
+.footnote[Broman 2016 [Steps toward reproducible research](https://bit.ly/jsm2016)]
+
+???
+
+# everything by code
+
+
+---
+<br>
+<br>
+<br>
+
+learn a language, any language, just do it
+
+.pull-left[
+  <img src="assets/figures/rlogo.jpg" width="100%">
+]
+
+.pull-right[
+  <img src="assets/figures/python-logo.png" width="70%">
+]
+
+???
+
+# learn a language
+
+
+---
+
+**spreadsheets: the 2nd best tool for everything**
+
+<br>
+<br>
+<br>
+
+.pull-left[
+  <img src="assets/figures/spreadsheet_hidden_data.png" width="100%">
+]
+
+.pull-right[
+
+the beauty and the travesty of spreadsheets is that they allow you to do just about *anything*
+
+* data in merged cells
+* data in formatting
+* small multiples
+* data in formulas
+
+]
+
+???
+
+# second best tool
+
+
+---
+class: middle
+
+* use open file formats (e.g., csv not xlsx)
+
+<br>
+<br>
+
+.center[
+  <img src="assets/figures/paperclip.jpeg" width="45%">
+]
+
+.footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
+
+???
+
+# open file formats
+
+---
+
+
+**spreadsheets versus scripting**
+
+consider, we want to remove samples that we feel may have been contaminated...
+
+.pull-left[
+
+  **in a R script**
+  <hr>
+  ```r
+  some work...
+  ```
+  
+
+.small[*comment code:*
+.light-blue[remove samples 4 and 5 that may have been compromised due to wading upstream during sampling]]
+  
+  ```r
+  chemistry_data %>%
+    filter(!sampleID %in% c(4,5))
+  ```
+  
+  ```r
+  ...more work
+  ```
+]
+
+.pull-right[
+
+  **in a spreadsheet**
+  <hr>
+  <img src="assets/figures/spreadsheet_remove_samples.png" width="105%">
+  
+]
+
+???
+
+# spreadsheets versus scripting
+
+
+---
+background-image: url('assets/figures/whypublish.png')
+background-size: 90%
+
+**why publish data**...
+
+.footnote[Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+???
+
+# why publish data
+
+* big picture
+  + increasingly a requirement
+  + advancement of science
+  
+* researcher perspective
+  + papers with publicly available data receive a higher number of citations than similar studies lacking available data<sup>1</sup>
+  + data sharing is associated with higher productivity
+  + a citeable product
+  
+
+---
+
+**ORCiD**
+
+<br>
+
+.center[
+  <img src="assets/figures/orcid.png" width="60%">
+]
+
+.footnote[[orcid.org](https://orcid.org/)]
+
+???
+
+# ORCiD
