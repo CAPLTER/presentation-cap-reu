@@ -145,6 +145,8 @@ class: middle
 - project organization
 - metadata
 - data formats
+- scripting
+- version control
 
 ???
 
@@ -154,17 +156,15 @@ class: middle
 ---
 class: inverse
 
-
-.yellow[*“There are only two hard things in Computer Science: cache invalidation and naming things.”*
-— P. Karlton]
-  
 <br>
-  
+
 which set of file(names)s would you prefer at 3 a.m. before a deadline?
 
 .center[
   <img src="assets/figures/good_bad_names.png" width="85%">
 ]
+
+.yellow[check with your mentor as to whether your lab employs a naming convention]
 
 .footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
 
@@ -173,32 +173,10 @@ which set of file(names)s would you prefer at 3 a.m. before a deadline?
 # naming things
 
 ---
-class: middle
-
-.center[
-  <img src="assets/figures/noniso.png" width="70%"></img>
-  <br>
-  .small[comprehensive map of all countries in the world that use MMDDYYYY format]
-]
-
-<br>
-  
-**use the ISO 8601 standard for dates (YYYY-MM-DD) everywhere. always. without exception, ever.**
-
-
-.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
-
-???
-
-# convention: ISO example
-
-
----
 
 .maroon[*"Your closest collaborator is you six months ago but you do not reply to emails."*
 — K. Broman]
 
-<br>
 <br>
 
 .pull-left[
@@ -214,11 +192,34 @@ class: middle
 * include README files
 ]
 
+.yellow[check with your mentor as to how your lab organizes files and directories]
+
 .footnote[K. Broman [Steps toward reproducible research](bit.ly/jsm2016)]
 
 ???
 
 # project organization
+
+
+---
+class: middle
+
+.center[
+comprehensive map of all countries in the world that use MMDDYYYY format
+
+  <img src="assets/figures/noniso.png" width="70%"></img>
+]
+
+<br>
+  
+use the ISO 8601 standard for dates (YYYY-MM-DD) everywhere. always. without exception, ever!
+
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# convention: ISO example
 
 
 ---
@@ -277,6 +278,18 @@ learn a language, any language, just do it
 ???
 
 # learn a language
+
+
+---
+class: middle, center
+
+<img src="assets/figures/excel_errors_wash_post.png" width="70%">
+
+.left-footnote[Ingraham 2016 [*An alarming number of scientific papers contain Excel errors*](https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/)]
+
+???
+
+# excel errors
 
 
 ---
@@ -368,10 +381,51 @@ consider, we want to remove samples that we feel may have been contaminated...
 
 
 ---
+class: inverse, middle, center
+
+<img src="assets/figures/CAP_renewal_screenshot.png" width="100%">
+
+???
+
+# file chaos
+
+
+---
+class: middle
+
+*it is all about taming chaos*...
+
+.center[
+  <img src="assets/figures/git_flow.png" width="70%">
+]
+
+.footnote[
+  Bryan 2018 [*Excuse Me, Do You Have a Moment to Talk About Version Control?*](https://doi.org/10.1080/00031305.2017.1399928)
+]
+
+.yellow[check with your mentor about your lab's use of version control]
+
+???
+
+# tame the chaos
+
+
+---
+class: inverse, middle, center
+
+<img src="assets/figures/bokis_on_git.png" width="80%">
+
+???
+
+# Vicky Boykis on Git
+
+---
 background-image: url('assets/figures/whypublish.png')
 background-size: 90%
 
 **why publish data**...
+
+.yellow[work with your mentor to ensure that the data you contribute are made publicly available]
 
 .footnote[Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
 
@@ -388,7 +442,6 @@ background-size: 90%
   + data sharing is associated with higher productivity
   + a citeable product
   
-
 ---
 
 **ORCiD**
