@@ -138,39 +138,30 @@ class: middle, center
 
 
 ---
+class: middle, center
+
+<img src="assets/figures/sycamore_fire.png" width="50%">
+
+???
+
+# sycamore creek
+
+
+---
 class: middle
 
-- naming things
-- conventions
-- project organization
-- metadata
-- data formats
-- scripting
-- version control
+- sound project organization
+- thoughtful naming
+- employing conventions
+- enriching with metadata
+- using open source tools and file formats
+- adhering to scripted workflows
+- manage with version control
 
 ???
 
 # best practices
 
-
----
-class: inverse
-
-<br>
-
-which set of file(names)s would you prefer at 3 a.m. before a deadline?
-
-.center[
-  <img src="assets/figures/good_bad_names.png" width="85%">
-]
-
-.yellow[check with your mentor as to whether your lab employs a naming convention]
-
-.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
-
-???
-
-# naming things
 
 ---
 
@@ -200,6 +191,25 @@ which set of file(names)s would you prefer at 3 a.m. before a deadline?
 
 # project organization
 
+
+---
+class: inverse
+
+<br>
+
+which set of file(names)s would you prefer at 3 a.m. before a deadline?
+
+.center[
+  <img src="assets/figures/good_bad_names.png" width="85%">
+]
+
+.yellow[check with your mentor as to whether your lab employs a naming convention]
+
+.footnote[J. Bryan [Naming things](https://speakerdeck.com/jennybc/how-to-name-files)]
+
+???
+
+# naming things
 
 ---
 class: middle
@@ -264,6 +274,7 @@ most basic principle for reproducible research: **do everything via code**
 <br>
 <br>
 <br>
+<br>
 
 learn a language, any language, just do it
 
@@ -285,7 +296,7 @@ class: middle, center
 
 <img src="assets/figures/excel_errors_wash_post.png" width="70%">
 
-.left-footnote[Ingraham 2016 [*An alarming number of scientific papers contain Excel errors*](https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/)]
+.left-footnote[Ingraham 2016 [An alarming number of scientific papers contain Excel errors](https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/)]
 
 ???
 
@@ -378,6 +389,19 @@ consider, we want to remove samples that we feel may have been contaminated...
 ???
 
 # spreadsheets versus scripting
+
+
+---
+
+<br>
+
+.center[
+  <img src="assets/figures/data-entry-form-174777474.gif">
+]
+
+???
+
+data entry
 
 
 ---
