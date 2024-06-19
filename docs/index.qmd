@@ -1,38 +1,11 @@
 ---
 format:
   revealjs: 
+    slide-number: true
     theme:
     - dark
     - custom.scss
 ---
-
-::: custom_title
-version control with git <span style="color:#f34c26">{{< fa brands git-alt size=1x >}}</span> and GitHub <span style="color:#74C0FC">{{< fa brands github size=1x >}}</span>
-:::
-
-```{mermaid}
-%%| label: opening-slide
-%%| fig-width: 10000000
-%%{init: { 'logLevel': 'debug', 'theme': 'dark' , 'themeVariables': {
-'commitLabelFontSize': '16px'
-} } }%%
-gitGraph
-  commit id: "initialize"
-  commit id: "add README"
-  commit id: "add model"
-  branch microbial
-  checkout microbial
-  commit id: "microbial params"
-  branch chemistry
-  checkout chemistry
-  commit id: "chemistry params"
-  checkout microbial
-  merge chemistry
-  checkout main
-  merge microbial
-  commit id: "one-pool model"
-```
-
 
 ## agenda
 
@@ -43,28 +16,30 @@ gitGraph
 :::
 
 
-## {#cap_icons data-menu-title="cap_icons" .center}
-
-:::: {.columns}
-
-::: {.column width="30%"}
-![](assets/figures/CAPLTERlogo-color-icon.png)
-:::
-
-::: {.column width="30%"}
-![](assets/figures/CAPLTERlogo-color-icon.png)
-:::
-
-::: {.column width="30%"}
-![](assets/figures/CAPLTERlogo-color-icon.png)
-:::
-
-::::
-
-
 ## {#research_workflow data-menu-title="research_workflow" .center}
 
-![](assets/figures/workflow.png)
+![](assets/figures/workflow.png){fig-align="center"}
+
+<small>
+  <ul style="list-style:none;">
+    <li>
+      🔗 [J. Bryan, UBC stat545](http://stat545.com/)
+    </li>
+  </ul>
+</small>
+
+
+## {#workflow_with_code data-menu-title="workflow_with_code" .center}
+
+![](assets/figures/workflow_with_data.png){fig-align="center"}
+
+<small>
+  <ul style="list-style:none;">
+    <li>
+      🔗 [J. Bryan, UBC stat545](http://stat545.com/)
+    </li>
+  </ul>
+</small>
 
 
 ## {#workflow_challenges data-menu-title="workflow_challenges" .center}
@@ -92,19 +67,6 @@ gitGraph
 :::
 
 
-## {#workflow_with_code data-menu-title="workflow_with_code" .center}
-
-![](assets/figures/workflow_with_data.png)
-
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 [J. Bryan, UBC stat545](http://stat545.com/)
-    </li>
-  </ul>
-</small>
-
-
 ## {#reproducible_research data-menu-title="reproducible_research"}
 
 ::: {style="color:#FFC627;"}
@@ -123,3 +85,266 @@ Replicating studies remains the gold standard for rigorous scientific research, 
 [^2]: Alson and Rick 2021 [A Beginner's Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)
 
 
+## reproducibility for scientific reasons {.smaller}
+
+::: {style="color:#FFC627;"}
+- increased trustworthiness
+- more rigorous, reliable science
+- learning more from one another's work
+:::
+
+
+## reproducibility for personal reasons {.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+::: {style="color:#FFC627;"}
+- helps researchers remember how and why they did *x*
+- enables researchers to quickly and simply modify figures, tables, etc.
+- enables quick reconfiguration of previously conducted research tasks
+:::
+:::
+::: {.column width="60%"}
+![](assets/figures/lego_grad_student.png){fig-align="center"}
+:::
+:::
+
+
+
+## {#lowndes data-menu-title="lowndes" .center}
+
+![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
+
+::: {style="font-size:0.5em;"}
+Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+:::
+
+
+---
+
+most basic principle for reproducible research: **do everything via code**
+
+::: {style="color:#FFC627;"}
+* downloading data from the web
+* converting an Excel file to CSV
+* renaming columns or variables
+* omitting bad samples or data points
+:::
+
+*...do all of these programmatically*
+
+<small>
+  <ul style="list-style:none;">
+    <li>
+      🔗 [Steps toward reproducible research](https://bit.ly/jsm2016)
+    </li>
+  </ul>
+</small>
+
+
+## on the importance of scripting {.smaller}
+
+::: {style="color:#FFC627;"}
+consider, we want to remove samples that we feel may have been compromised...
+:::
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+ **in a R script**
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+#| code-overflow: wrap
+
+some work...
+
+# remove samples 4 and 5 that may have
+# been compromised due to the monsters
+
+chemistry_data %>%
+  dplyr::filter(!sampleID %in% c(4,5))
+
+...more work
+```
+:::
+
+::: {.column width="55%"}
+ **in a spreadsheet**
+![](assets/figures/spreadsheet_remove_samples.png){fig-align="center"}
+:::
+
+::::
+
+
+## Excel errors {.smaller}
+
+![](assets/figures/excel_errors_wash_post.png){fig-align="center"}
+
+
+## {#lowndes1 data-menu-title="lowndes1" .center}
+
+![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
+
+::: {style="font-size:0.5em;"}
+Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+:::
+
+
+## {#final_doc data-menu-title="final_doc" .center}
+![](assets/figures/final_doc.gif){fig-align="center"}
+
+
+## {#git_ecosystem data-menu-title="git_ecosystem" .center}
+![](assets/figures/Fig2_Pereira-Braga-etal_2023.jpeg){fig-align="center"}
+
+::: {style="font-size:0.5em;"}
+Braga, P. H. P., Hébert, K., et al. [Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution, 14, 1364–1380. (2023)](https://doi.org/10.1111/2041-210X.14108)
+:::
+
+
+## {#bokis_on_git data-menu-title="bokis_on_git" .center}
+![](assets/figures/bokis_on_git.png){fig-align="center"}
+
+
+## {#lowndes2 data-menu-title="lowndes2" .center}
+
+![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
+
+::: {style="font-size:0.5em;"}
+Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+:::
+
+
+## tidy data {.smaller}
+
+[*Open an intro to ANY statistics textbook and you will find that statistics (analysis, plotting - anything, really) starts once you have tidy data.*]{style="color:#FFC627; font-size:0.9em;"} [*Dr. Dianne Cook*]{style="color:#FFFFFF; font-size:0.9em;"}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](assets/figures/r_for_data_science.png){fig-align="center"}
+:::
+
+::: {.column width="80%"}
+![](assets/figures/tidy-data.png){fig-align="center"}
+:::
+
+::::
+
+
+## project organization {.smaller}
+
+[*If I could go back to my grad student self and tell her one thing, it would be: have a system to organize your files, data, and project notes. You're thinking a lot about how to generate data, and what those data mean in the broader body of literature, but this is as important.*]{style="color:#FFC627; font-size:0.9em;"} [*Dr. Jacquelyn Gill*]{style="color:#FFFFFF; font-size:0.9em;"}
+
+<hr>
+
+::: {.columns}
+
+::: {.column width="45%"}
+![](assets/figures/projectOrganizationCropped.png){fig-align="center"}
+:::
+
+::: {.column width="55%"}
+::: {style="color:#FFC627;"}
+* use one folder per project
+* separation of data, methods, output, etc.
+* craft informative names
+* include README files
+:::
+:::
+
+:::
+
+<small>
+  <ul style="list-style:none;">
+    <li>
+      🔗 [Steps toward reproducible research](https://bit.ly/jsm2016)
+    </li>
+  </ul>
+</small>
+
+
+## standardization {.smaller}
+
+::: {style="color:#FFC627;"}
+comprehensive map of all countries in the world that use MMDDYYYY format
+:::
+
+![](assets/figures/noniso.png){fig-align="center"}
+
+
+## good coding practices {.smaller}
+
+::: {style="color:#FFC627; font-size:0.8em;"}
+A recent study aiming to run 2,000 project's worth of R code found that 74% of the associated R files failed to complete without error (Trisovic et al. 2022)[^4]. Many of those errors involve coding practices that hinder reproducibility but are easily preventable by the original code authors.
+:::
+
+![](assets/figures/figure_trisovic-diagram.png){width=70% fig-align="center"}
+
+[^4]: Trisovic, A., Lau, M.K., Pasquier, T. et al. [A large-scale study on research code quality and execution. Sci Data 9, 60 (2022).](https://doi.org/10.1038/s41597-022-01143-6)
+
+
+## publishing data (and code) {.smaller}
+
+::: {style="color:#FFC627; font-size:0.8em;"}
+work with your mentor to determine the best way to publish your data and code
+:::
+
+![](assets/figures/whypublish.png){width=70% fig-align="center"}
+
+<small>
+  <ul style="list-style:none;">
+    <li>
+      🔗 Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)
+    </li>
+  </ul>
+</small>
+
+::: {.notes}
+* big picture
+  + increasingly a requirement
+  + advancement of science
+  
+* researcher perspective
+  + papers with publicly available data receive a higher number of citations than similar studies lacking available data<sup>1</sup>
+  + data sharing is associated with higher productivity
+  + a citeable product
+:::
+
+
+# {#caplter data-menu-title="caplter" .center}
+
+![](assets/figures/CAPLTERlogo-color-icon.png){width=70% fig-align="center"}
+
+::: {style="text-align:center;"}
+[https://sustainability-innovation.asu.edu/caplter/](https://sustainability-innovation.asu.edu/caplter/)
+:::
+
+
+# {#asu_data_management data-menu-title="asu_data_management" .center}
+
+::: {.columns}
+
+::: {.column width="25%"}
+plan
+:::
+
+::: {.column width="25%"}
+generate
+:::
+
+::: {.column width="25%"}
+process
+:::
+
+::: {.column width="25%"}
+share
+:::
+
+:::

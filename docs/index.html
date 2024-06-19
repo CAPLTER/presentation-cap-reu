@@ -7,9 +7,7 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.553">
 
   <title>index</title>
@@ -30,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -321,48 +384,12 @@
       margin-right: 0; 
     }
   </style>
-  <script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 
-<section class="slide level2">
-
-<div class="custom_title">
-<p>version control with git <span style="color:#f34c26"><i class="fa-brands fa-git-alt fa-1x" aria-label="git-alt"></i></span> and GitHub <span style="color:#74C0FC"><i class="fa-brands fa-github fa-1x" aria-label="github"></i></span></p>
-</div>
-<div class="cell" data-reveal="true" data-fig-width="10000000" data-layout-align="default">
-<div class="cell-output-display">
-<div id="opening-slide">
-<div>
-<pre class="mermaid mermaid-js" data-label="opening-slide">%%{init: { 'logLevel': 'debug', 'theme': 'dark' , 'themeVariables': {
-'commitLabelFontSize': '16px'
-} } }%%
-gitGraph
-  commit id: "initialize"
-  commit id: "add README"
-  commit id: "add model"
-  branch microbial
-  checkout microbial
-  commit id: "microbial params"
-  branch chemistry
-  checkout chemistry
-  commit id: "chemistry params"
-  checkout microbial
-  merge chemistry
-  checkout main
-  merge microbial
-  commit id: "one-pool model"
-</pre>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section id="agenda" class="slide level2">
 <h2>agenda</h2>
 <div style="color:#FFC627;">
@@ -373,22 +400,28 @@ gitGraph
 </ul>
 </div>
 </section>
-<section id="cap_icons" class="slide level2 center" data-menu-title="cap_icons">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="assets/figures/CAPLTERlogo-color-icon.png"></p>
-</div><div class="column" style="width:30%;">
-<p><img data-src="assets/figures/CAPLTERlogo-color-icon.png"></p>
-</div><div class="column" style="width:30%;">
-<p><img data-src="assets/figures/CAPLTERlogo-color-icon.png"></p>
-</div>
-</div>
-</section>
 <section id="research_workflow" class="slide level2 center" data-menu-title="research_workflow">
 <h2></h2>
 
-<img data-src="assets/figures/workflow.png" class="r-stretch"></section>
+<img data-src="assets/figures/workflow.png" class="quarto-figure quarto-figure-center r-stretch"><small>
+<ul style="list-style:none;">
+<li>
+🔗 <a href="http://stat545.com/">J. Bryan, UBC stat545</a>
+</li>
+</ul>
+</small><p><small></small></p>
+</section>
+<section id="workflow_with_code" class="slide level2 center" data-menu-title="workflow_with_code">
+<h2></h2>
+
+<img data-src="assets/figures/workflow_with_data.png" class="quarto-figure quarto-figure-center r-stretch"><small>
+<ul style="list-style:none;">
+<li>
+🔗 <a href="http://stat545.com/">J. Bryan, UBC stat545</a>
+</li>
+</ul>
+</small><p><small></small></p>
+</section>
 <section id="workflow_challenges" class="slide level2 center" data-menu-title="workflow_challenges">
 <h2></h2>
 <div style="color:#FFC627;">
@@ -414,17 +447,6 @@ gitGraph
 <p><em>“Basically, if the thought of redoing your analyses is terrifying then you are doing it wrong.”</em> — J. Bryan</p>
 </div>
 </section>
-<section id="workflow_with_code" class="slide level2 center" data-menu-title="workflow_with_code">
-<h2></h2>
-
-<img data-src="assets/figures/workflow_with_data.png" class="r-stretch"><small>
-<ul style="list-style:none;">
-<li>
-🔗 <a href="http://stat545.com/">J. Bryan, UBC stat545</a>
-</li>
-</ul>
-</small><p><small></small></p>
-</section>
 <section id="reproducible_research" class="slide level2" data-menu-title="reproducible_research">
 <h2></h2>
 <div style="color:#FFC627;">
@@ -436,12 +458,256 @@ gitGraph
 <div style="color:#FFC627;">
 <p>Replicating studies remains the gold standard for rigorous scientific research, but reproducibility is increasingly viewed as a <span style="color:#8C1D40;">minimum standard</span> that all scientists should strive toward.<sup>1</sup></p>
 </div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Alson and Rick 2021 <a href="https://doi.org/10.1002/bes2.1801">A Beginner’s Guide to Conducting Reproducible Research</a></p></li></ol></aside></section>
+<section id="reproducibility-for-scientific-reasons" class="slide level2 smaller">
+<h2>reproducibility for scientific reasons</h2>
+<div style="color:#FFC627;">
+<ul>
+<li>increased trustworthiness</li>
+<li>more rigorous, reliable science</li>
+<li>learning more from one another’s work</li>
+</ul>
+</div>
+</section>
+<section id="reproducibility-for-personal-reasons" class="slide level2 smaller">
+<h2>reproducibility for personal reasons</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div style="color:#FFC627;">
+<ul>
+<li>helps researchers remember how and why they did <em>x</em></li>
+<li>enables researchers to quickly and simply modify figures, tables, etc.</li>
+<li>enables quick reconfiguration of previously conducted research tasks</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/figures/lego_grad_student.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lowndes" class="slide level2 center" data-menu-title="lowndes">
+<h2></h2>
+
+<img data-src="assets/figures/lowndes_ohi.jpg" class="quarto-figure quarto-figure-center r-stretch"><div style="font-size:0.5em;">
+<p>Lowndes, J., Best, B., Scarborough, C. et al.&nbsp;<a href="https://doi.org/10.1038/s41559-017-0160">Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)</a></p>
+</div>
+</section>
+<section class="slide level2">
+
+<p>most basic principle for reproducible research: <strong>do everything via code</strong></p>
+<div style="color:#FFC627;">
+<ul>
+<li>downloading data from the web</li>
+<li>converting an Excel file to CSV</li>
+<li>renaming columns or variables</li>
+<li>omitting bad samples or data points</li>
+</ul>
+</div>
+<p><em>…do all of these programmatically</em></p>
+<small>
+<ul style="list-style:none;">
+<li>
+🔗 <a href="https://bit.ly/jsm2016">Steps toward reproducible research</a>
+</li>
+</ul>
+</small><p><small></small></p>
+</section>
+<section id="on-the-importance-of-scripting" class="slide level2 smaller">
+<h2>on the importance of scripting</h2>
+<div style="color:#FFC627;">
+<p>consider, we want to remove samples that we feel may have been compromised…</p>
+</div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>in a R script</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a>some work...</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># remove samples 4 and 5 that may have</span></span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># been compromised due to the monsters</span></span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>chemistry_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>sampleID <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>))</span>
+<span id="cb1-8"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="" aria-hidden="true" tabindex="-1"></a>...more work</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:55%;">
+<p><strong>in a spreadsheet</strong> <img data-src="assets/figures/spreadsheet_remove_samples.png" class="quarto-figure quarto-figure-center"></p>
+</div>
+</div>
+</section>
+<section id="excel-errors" class="slide level2 smaller">
+<h2>Excel errors</h2>
+
+<img data-src="assets/figures/excel_errors_wash_post.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="lowndes1" class="slide level2 center" data-menu-title="lowndes1">
+<h2></h2>
+
+<img data-src="assets/figures/lowndes_ohi.jpg" class="quarto-figure quarto-figure-center r-stretch"><div style="font-size:0.5em;">
+<p>Lowndes, J., Best, B., Scarborough, C. et al.&nbsp;<a href="https://doi.org/10.1038/s41559-017-0160">Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)</a></p>
+</div>
+</section>
+<section id="final_doc" class="slide level2 center" data-menu-title="final_doc">
+<h2></h2>
+
+<img data-src="assets/figures/final_doc.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="git_ecosystem" class="slide level2 center" data-menu-title="git_ecosystem">
+<h2></h2>
+
+<img data-src="assets/figures/Fig2_Pereira-Braga-etal_2023.jpeg" class="quarto-figure quarto-figure-center r-stretch"><div style="font-size:0.5em;">
+<p>Braga, P. H. P., Hébert, K., et al.&nbsp;<a href="https://doi.org/10.1111/2041-210X.14108">Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution, 14, 1364–1380. (2023)</a></p>
+</div>
+</section>
+<section id="bokis_on_git" class="slide level2 center" data-menu-title="bokis_on_git">
+<h2></h2>
+
+<img data-src="assets/figures/bokis_on_git.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="lowndes2" class="slide level2 center" data-menu-title="lowndes2">
+<h2></h2>
+
+<img data-src="assets/figures/lowndes_ohi.jpg" class="quarto-figure quarto-figure-center r-stretch"><div style="font-size:0.5em;">
+<p>Lowndes, J., Best, B., Scarborough, C. et al.&nbsp;<a href="https://doi.org/10.1038/s41559-017-0160">Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)</a></p>
+</div>
+</section>
+<section id="tidy-data" class="slide level2 smaller">
+<h2>tidy data</h2>
+<p><span style="color:#FFC627; font-size:0.9em;"><em>Open an intro to ANY statistics textbook and you will find that statistics (analysis, plotting - anything, really) starts once you have tidy data.</em></span> <span style="color:#FFFFFF; font-size:0.9em;"><em>Dr.&nbsp;Dianne Cook</em></span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/figures/r_for_data_science.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:80%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/figures/tidy-data.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="project-organization" class="slide level2 smaller">
+<h2>project organization</h2>
+<p><span style="color:#FFC627; font-size:0.9em;"><em>If I could go back to my grad student self and tell her one thing, it would be: have a system to organize your files, data, and project notes. You’re thinking a lot about how to generate data, and what those data mean in the broader body of literature, but this is as important.</em></span> <span style="color:#FFFFFF; font-size:0.9em;"><em>Dr.&nbsp;Jacquelyn Gill</em></span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/figures/projectOrganizationCropped.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:55%;">
+<div style="color:#FFC627;">
+<ul>
+<li>use one folder per project</li>
+<li>separation of data, methods, output, etc.</li>
+<li>craft informative names</li>
+<li>include README files</li>
+</ul>
+</div>
+</div>
+</div>
+<small>
+<ul style="list-style:none;">
+<li>
+🔗 <a href="https://bit.ly/jsm2016">Steps toward reproducible research</a>
+</li>
+</ul>
+</small><p><small></small></p>
+</section>
+<section id="standardization" class="slide level2 smaller">
+<h2>standardization</h2>
+<div style="color:#FFC627;">
+<p>comprehensive map of all countries in the world that use MMDDYYYY format</p>
+</div>
+
+<img data-src="assets/figures/noniso.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="good-coding-practices" class="slide level2 smaller">
+<h2>good coding practices</h2>
+<div style="color:#FFC627; font-size:0.8em;">
+<p>A recent study aiming to run 2,000 project’s worth of R code found that 74% of the associated R files failed to complete without error (Trisovic et al.&nbsp;2022)<sup>1</sup>. Many of those errors involve coding practices that hinder reproducibility but are easily preventable by the original code authors.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/figures/figure_trisovic-diagram.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Trisovic, A., Lau, M.K., Pasquier, T. et al.&nbsp;<a href="https://doi.org/10.1038/s41597-022-01143-6">A large-scale study on research code quality and execution. Sci Data 9, 60 (2022).</a></p></li></ol></aside></section>
+<section id="publishing-data-and-code" class="slide level2 smaller">
+<h2>publishing data (and code)</h2>
+<div style="color:#FFC627; font-size:0.8em;">
+<p>work with your mentor to determine the best way to publish your data and code</p>
+</div>
+
+<img data-src="assets/figures/whypublish.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><small>
+<ul style="list-style:none;">
+<li>
+🔗 Milotić 2018 <a href="https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management">Good enough practices in data management</a>
+</li>
+</ul>
+</small><p><small></small></p>
+<aside class="notes">
+<ul>
+<li>big picture
+<ul>
+<li>increasingly a requirement</li>
+<li>advancement of science</li>
+</ul></li>
+<li>researcher perspective
+<ul>
+<li>papers with publicly available data receive a higher number of citations than similar studies lacking available data<sup>1</sup></li>
+<li>data sharing is associated with higher productivity</li>
+<li>a citeable product</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="caplter" class="title-slide slide level1 center" data-menu-title="caplter">
+<h1></h1>
+
+<img data-src="assets/figures/CAPLTERlogo-color-icon.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><div style="text-align:center;">
+<p><a href="https://sustainability-innovation.asu.edu/caplter/">https://sustainability-innovation.asu.edu/caplter/</a></p>
+</div>
+</section>
+
+<section id="asu_data_management" class="title-slide slide level1 center" data-menu-title="asu_data_management">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>plan</p>
+</div><div class="column" style="width:25%;">
+<p>generate</p>
+</div><div class="column" style="width:25%;">
+<p>process</p>
+</div><div class="column" style="width:25%;">
+<p>share</p>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Alson and Rick 2021 <a href="https://doi.org/10.1002/bes2.1801">A Beginner’s Guide to Conducting Reproducible Research</a></p></li></ol></aside></section>
+</section>
+
 
     </div>
   </div>
@@ -494,7 +760,7 @@ gitGraph
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -653,6 +919,44 @@ gitGraph
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
