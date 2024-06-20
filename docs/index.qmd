@@ -70,7 +70,7 @@ format:
 ## {#reproducible_research data-menu-title="reproducible_research"}
 
 ::: {style="color:#FFC627;"}
-[reproducible research]{style="color:#8C1D40;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^1]
+[reproducible research]{style="color:#FFFFFF;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^1]
 :::
 
 [^1]: Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)
@@ -79,7 +79,7 @@ format:
 ## {#replication data-menu-title="replication"}
 
 ::: {style="color:#FFC627;"}
-Replicating studies remains the gold standard for rigorous scientific research, but reproducibility is increasingly viewed as a [minimum standard]{style="color:#8C1D40;"} that all scientists should strive toward.[^2]
+Replicating studies remains the gold standard for rigorous scientific research, but reproducibility is increasingly viewed as a [minimum standard]{style="color:#FFFFFF;"} that all scientists should strive toward.[^2]
 :::
 
 [^2]: Alson and Rick 2021 [A Beginner's Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)
@@ -87,12 +87,28 @@ Replicating studies remains the gold standard for rigorous scientific research, 
 
 ## reproducibility for scientific reasons {.smaller}
 
+::: {.columns}
+::: {.column width="55%"}
 ::: {style="color:#FFC627;"}
 - increased trustworthiness
 - more rigorous, reliable science
 - learning more from one another's work
+
+<br>
+<br>
+<br>
+<br>
+
+["The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."]{style="color:#FFFFFF; font-size:0.9em; font-style:italic;"}[^3]
+:::
 :::
 
+::: {.column width="45%"}
+![](assets/figures/climategate.png){width=75% fig-align="center"}
+:::
+:::
+
+[^3]: Adam 2010 [*Climategate scientists cleared of manipulating data on global warming*](https://www.theguardian.com/environment/2010/jul/08/muir-russell-climategate-climate-science)
 
 ## reproducibility for personal reasons {.smaller}
 
@@ -110,7 +126,6 @@ Replicating studies remains the gold standard for rigorous scientific research, 
 :::
 
 
-
 ## {#lowndes data-menu-title="lowndes" .center}
 
 ![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
@@ -120,9 +135,7 @@ Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in les
 :::
 
 
----
-
-most basic principle for reproducible research: **do everything via code**
+## most basic principle for reproducible research: [do everything via code]{style="color:#8C1D40;"} {.smaller}
 
 ::: {style="color:#FFC627;"}
 * downloading data from the web
@@ -150,7 +163,7 @@ consider, we want to remove samples that we feel may have been compromised...
 
 :::: {.columns}
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 
  **in a R script**
 
@@ -172,7 +185,7 @@ chemistry_data %>%
 ```
 :::
 
-::: {.column width="55%"}
+::: {.column width="50%"}
  **in a spreadsheet**
 ![](assets/figures/spreadsheet_remove_samples.png){fig-align="center"}
 :::
@@ -327,24 +340,60 @@ work with your mentor to determine the best way to publish your data and code
 :::
 
 
-# {#asu_data_management data-menu-title="asu_data_management" .center}
+## ASU research data management services {.center .smaller}
 
+::: {.columns}
+::: {.column width="50%"}
+![](assets/figures/rdmo_website.png){width=100% fig-align="center"}
+:::
+::: {.column with="50%"}
+![](assets/figures/rdaf_nist.png){width=50% fig-align="center"}
+:::
+:::
+
+
+# {#asu_rdm_services data-menu-title="asu_rdm_services" .center}
+
+::: {style="font-size:0.7em;"}
 ::: {.columns}
 
 ::: {.column width="25%"}
-plan
+&nbsp;&nbsp;&nbsp;&nbsp;[PLAN]{style="color:#FFC627;"}
+
+- proposal editing
+- data management plans
+- training
+  + information security
+  + HIPAA
+- ADHS (health data)
 :::
 
 ::: {.column width="25%"}
-generate
+&nbsp;&nbsp;&nbsp;[GENERATE]{style="color:#FFC627;"}
+
+- LabArchives
+- REDCap
+- secure data environment
+- data storage locator
 :::
 
 ::: {.column width="25%"}
-process
+&nbsp;&nbsp;&nbsp;[PROCESS]{style="color:#FFC627;"}
+
+- high-performance computing
+- library data science & analytics
+- CHS Biostats core
 :::
 
 ::: {.column width="25%"}
-share
+&nbsp;&nbsp;&nbsp;[SHARE]{style="color:#FFC627;"}
+
+- digital repository
 :::
 
+:::
+:::
+
+::: smaller_text
+[https://rto.asu.edu/research-data-management/](https://rto.asu.edu/research-data-management/)
 :::
