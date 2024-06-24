@@ -67,20 +67,12 @@ format:
 :::
 
 
-## {#reproducible_research data-menu-title="reproducible_research"}
-
-::: {style="color:#FFC627;"}
-[reproducible research]{style="color:#FFFFFF;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^1]
-:::
+## [reproducible research]{style="color:#FFC627;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^1] {.smaller}
 
 [^1]: Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)
 
 
-## {#replication data-menu-title="replication"}
-
-::: {style="color:#FFC627;"}
-Replicating studies remains the gold standard for rigorous scientific research, but reproducibility is increasingly viewed as a [minimum standard]{style="color:#FFFFFF;"} that all scientists should strive toward.[^2]
-:::
+## Replicating studies remains the gold standard for rigorous scientific research, but reproducibility is viewed increasingly as a [minimum standard]{style="color:#FFC627;"} that all scientists should strive toward.[^2] {.smaller}
 
 [^2]: Alson and Rick 2021 [A Beginner's Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)
 
@@ -193,11 +185,6 @@ chemistry_data %>%
 ::::
 
 
-## Excel errors {.smaller}
-
-![](assets/figures/excel_errors_wash_post.png){fig-align="center"}
-
-
 ## {#lowndes1 data-menu-title="lowndes1" .center}
 
 ![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
@@ -209,6 +196,15 @@ Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in les
 
 ## {#final_doc data-menu-title="final_doc" .center}
 ![](assets/figures/final_doc.gif){fig-align="center"}
+
+
+## it is all about taming the chaos {.smaller .center .nostretch}
+
+![](assets/figures/git_flow.png){width=90% fig-align="center"}
+
+::: {style="font-size:0.5em;"}
+Bryan 2018 [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.1080/00031305.2017.1399928)
+:::
 
 
 ## {#git_ecosystem data-menu-title="git_ecosystem" .center}
