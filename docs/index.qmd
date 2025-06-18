@@ -204,8 +204,12 @@ Braga et al. 2023 [Not just for programmers: How GitHub can accelerate collabora
 :::
 
 
-## {#bokis_on_git data-menu-title="bokis_on_git" .center}
-![](assets/figures/bokis_on_git.png){fig-align="center"}
+## ASU course
+
+Julia Damerow  
+Collaborative Computational Research Tools  
+CAS 598  
+spring 2026  
 
 
 ## {#lowndes-tidy data-menu-title="lowndes: tidy" .center}
@@ -328,7 +332,7 @@ Milotić 2018 [Good enough practices in data management](https://speakerdeck.com
 [https://rto.asu.edu/research-data-management/](https://rto.asu.edu/research-data-management/)
 
 
-# {#asu_rdm_services data-menu-title="asu_rdm_services" .center}
+## {#asu_rdm_services data-menu-title="asu_rdm_services" .center}
 
 ::: {style="font-size:0.7em;"}
 ::: {.columns}
