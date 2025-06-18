@@ -11,7 +11,7 @@ format:
 
 ::: {style="color:#FFC627;"}
 - reproducibility & open science
-- data management resources and expections of the CAP LTER
+- data management resources & expectations of the CAP LTER
 - data management resources at ASU
 :::
 
@@ -20,26 +20,22 @@ format:
 
 ![](assets/figures/workflow.png){fig-align="center"}
 
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 [J. Bryan, UBC stat545](http://stat545.com/)
-    </li>
-  </ul>
-</small>
+<br>
+
+::: aside
+J. Bryan
+:::
 
 
 ## {#workflow_with_code data-menu-title="workflow_with_code" .center}
 
 ![](assets/figures/workflow_with_data.png){fig-align="center"}
 
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 [J. Bryan, UBC stat545](http://stat545.com/)
-    </li>
-  </ul>
-</small>
+<br>
+
+::: aside
+J. Bryan
+:::
 
 
 ## goals {.smaller .center}
@@ -49,14 +45,14 @@ format:
 - available, transparent workflow
 :::
 
-## [reproducible research]{style="color:#FFC627;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^1] {.smaller}
+## [Reproducible research]{style="color:#FFC627;"} is the ability to recompute data analytic results given an observed data set and knowledge of the data analysis pipeline.[^peng_2015] {.smaller}
 
-[^1]: Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)
+[^peng_2015]: Peng 2015 [The reproducibility crisis in science: A statistical counterattack](https://doi.org/10.1111/j.1740-9713.2015.00827.x)
 
 
-## Replicating studies remains the gold standard for rigorous scientific research, but [reproducibility is viewed increasingly as a minimum standard]{style="color:#FFC627;"} that all scientists should strive toward.[^2] {.smaller}
+## Replicating studies remains the gold standard for rigorous scientific research, but [reproducibility is viewed increasingly as a minimum standard]{style="color:#FFC627;"} that all scientists should strive toward.[^alson_rick] {.smaller}
 
-[^2]: Alson and Rick 2021 [A Beginner's Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)
+[^alson_rick]: Alson and Rick 2021 [A Beginner's Guide to Conducting Reproducible Research](https://doi.org/10.1002/bes2.1801)
 
 
 ## reproducibility for scientific reasons {.smaller}
@@ -69,13 +65,10 @@ format:
 - making available a wealth of data
 - learning more from other works
 
-
-<br>
-<br>
 <br>
 <br>
 
-["The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."]{style="color:#FFFFFF; font-size:0.9em; font-style:italic;"}[^3]
+["The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."]{style="color:#FFFFFF; font-size:0.9em; font-style:italic;"}[^adam]
 :::
 :::
 
@@ -84,7 +77,8 @@ format:
 :::
 :::
 
-[^3]: Adam 2010 [*Climategate scientists cleared of manipulating data on global warming*](https://www.theguardian.com/environment/2010/jul/08/muir-russell-climategate-climate-science)
+[^adam]: Adam 2010 [Climategate scientists cleared of manipulating data on global warming](https://www.theguardian.com/environment/2010/jul/08/muir-russell-climategate-climate-science)
+
 
 ## reproducibility for personal reasons {.smaller}
 
@@ -104,22 +98,19 @@ format:
 
 ## {#doing_it_wrong data-menu-title="doing_it_wrong" background-image="https://media.giphy.com/media/MEtSuIu6qu0HC/giphy.gif" background-size=50%}
 
-::: {style="color:#FFC627;"}
-*"Basically, if the thought of redoing your analyses is terrifying then you are doing it wrong."*
-— J. Bryan
-:::
+[*"Basically, if the thought of redoing your analyses is terrifying then you are doing it wrong."*]{style="color:#FFC627; font-size:0.9em;"} [J. Bryan]{style="color:#FFFFFF; font-size:0.9em;"}
 
 
-## {#lowndes data-menu-title="lowndes" .center}
+## {#lowndes-code data-menu-title="lowndes: code" .center}
 
 ![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
 
-::: {style="font-size:0.5em;"}
-Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+::: {style="font-size:20px;"}
+Lowndes et al. 2017 [Our path to better science in less time using open data science tools](https://doi.org/10.1038/s41559-017-0160)
 :::
 
 
-## most basic principle for reproducible research: [do everything via code]{style="color:#8C1D40;"} {.smaller}
+## most basic principle for reproducible research: [do everything via code]{style="color:#8C1D40;"} [^broman] {.smaller} 
 
 ::: {style="color:#FFC627;"}
 * downloading data from the web
@@ -130,13 +121,7 @@ Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in les
 
 *...do all of these programmatically*
 
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 [Steps toward reproducible research](https://bit.ly/jsm2016)
-    </li>
-  </ul>
-</small>
+[^broman]: [Steps toward reproducible research](https://bit.ly/jsm2016)
 
 
 ## on the importance of scripting {.smaller}
@@ -162,8 +147,8 @@ some work...
 # remove samples 4 and 5 that may have
 # been compromised due to the monsters
 
-chemistry_data %>%
-  dplyr::filter(!sampleID %in% c(4,5))
+chemistry_data |>
+  dplyr::filter(!sampleID %in% c(4, 5))
 
 ...more work
 ```
@@ -177,29 +162,45 @@ chemistry_data %>%
 ::::
 
 
-## {#lowndes1 data-menu-title="lowndes1" .center}
+## {#lowndes-git data-menu-title="lowndes: git" .center}
 
 ![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
 
-::: {style="font-size:0.5em;"}
-Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+::: {style="font-size:20px;"}
+Lowndes et al. 2017 [Our path to better science in less time using open data science tools](https://doi.org/10.1038/s41559-017-0160)
 :::
 
 
-## it is all about taming the chaos {.smaller .center .nostretch}
+## why version control? {.smaller}
 
-![](assets/figures/git_flow.png){width=90% fig-align="center"}
+Have you ever:
 
-::: {style="font-size:0.5em;"}
-Bryan 2018 [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.1080/00031305.2017.1399928)
+- Made a change to code, realised it was a mistake and wanted to revert back?
+- Lost code or had a backup that was too old?
+- Had to maintain multiple versions of a product?
+- Wanted to see the difference between two (or more) versions of your code?
+- Wanted to prove that a particular change broke or fixed a piece of code?
+- Wanted to review the history of some code?
+- Wanted to submit a change to someone else's code?
+- Wanted to share your code, or let other people work on your code?
+- Wanted to see how much work is being done, and where, when and by whom?
+- Wanted to experiment with a new feature without interfering with working code?
+
+In these cases, and no doubt others, a version control system should make your life easier.
+
+::: {style="font-size:20px;"}
+[why-should-i-use-version-control](https://stackoverflow.com/questions/1408450/why-should-i-use-version-control)
 :::
 
 
 ## {#git_ecosystem data-menu-title="git_ecosystem" .center}
+
+#### git + the cloud = much, much more than just tracking files
+
 ![](assets/figures/Fig2_Pereira-Braga-etal_2023.jpeg){fig-align="center"}
 
-::: {style="font-size:0.5em;"}
-Braga, P. H. P., Hébert, K., et al. [Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution, 14, 1364–1380. (2023)](https://doi.org/10.1111/2041-210X.14108)
+::: {style="font-size:20px;"}
+Braga et al. 2023 [Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution](https://doi.org/10.1111/2041-210X.14108)
 :::
 
 
@@ -207,12 +208,12 @@ Braga, P. H. P., Hébert, K., et al. [Not just for programmers: How GitHub can a
 ![](assets/figures/bokis_on_git.png){fig-align="center"}
 
 
-## {#lowndes2 data-menu-title="lowndes2" .center}
+## {#lowndes-tidy data-menu-title="lowndes: tidy" .center}
 
 ![](assets/figures/lowndes_ohi.jpg){fig-align="center"}
 
-::: {style="font-size:0.5em;"}
-Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in less time using open data science tools. Nat Ecol Evol 1, 0160 (2017)](https://doi.org/10.1038/s41559-017-0160)
+::: {style="font-size:20px;"}
+Lowndes et al. 2017 [Our path to better science in less time using open data science tools](https://doi.org/10.1038/s41559-017-0160)
 :::
 
 
@@ -258,13 +259,12 @@ Lowndes, J., Best, B., Scarborough, C. et al. [Our path to better science in les
 
 :::
 
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 [Steps toward reproducible research](https://bit.ly/jsm2016)
-    </li>
-  </ul>
-</small>
+<br>
+<br>
+
+::: aside
+*this is more guidance from* [Steps toward reproducible research](https://bit.ly/jsm2016)
+:::
 
 
 ## standardization {.smaller}
@@ -279,12 +279,12 @@ comprehensive map of all countries in the world that use MMDDYYYY format
 ## good coding practices {.smaller}
 
 ::: {style="color:#FFC627; font-size:0.8em;"}
-A recent study aiming to run 2,000 project's worth of R code found that 74% of the associated R files failed to complete without error (Trisovic et al. 2022)[^4]. Many of those errors involve coding practices that hinder reproducibility but are easily preventable by the original code authors.
+A recent study aiming to run 2,000 project's worth of R code found that 74% of the associated R files failed to complete without error[^trisovic]. Many of those errors involve coding practices that hinder reproducibility but are easily preventable by the original code authors.
 :::
 
 ![](assets/figures/figure_trisovic-diagram.png){width=70% fig-align="center"}
 
-[^4]: Trisovic, A., Lau, M.K., Pasquier, T. et al. [A large-scale study on research code quality and execution. Sci Data 9, 60 (2022).](https://doi.org/10.1038/s41597-022-01143-6)
+[^trisovic]: Trisovic et al. 2022 [A large-scale study on research code quality and execution](https://doi.org/10.1038/s41597-022-01143-6)
 
 
 ## publishing data (and code) {.smaller}
@@ -295,13 +295,10 @@ work with your mentor to determine the best way to publish your data and code
 
 ![](assets/figures/whypublish.png){width=70% fig-align="center"}
 
-<small>
-  <ul style="list-style:none;">
-    <li>
-      🔗 Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)
-    </li>
-  </ul>
-</small>
+
+::: aside
+Milotić 2018 [Good enough practices in data management](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)
+:::
 
 ::: {.notes}
 * big picture
